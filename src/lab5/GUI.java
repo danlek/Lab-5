@@ -1,7 +1,13 @@
 package lab5;
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ * GUI version 1.0
+ * Tillhandahåller en GUI (duh) för enkel
+ * styrning och manipulation av data.
+ * @author danlek
+ *
+ */
 public class GUI extends JPanel 
 {
 	private JFrame frame;
@@ -92,6 +98,10 @@ public class GUI extends JPanel
 		return ageTxt.getText();
 		
 	}
+	//Retunerar ett integer värde vilket anger
+	//vilken kund man har markerat i listan.
+	//Om ingen kund är markerad returneras värdet
+	//-1.
 	public int getFocusedCustomer()
 	{
 		int returnValue = -1;

@@ -3,7 +3,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
- 
+ /**
+  * AddCustomerButton verion 1.0
+  * SubKlass till JButton med action listener
+  * inbyggt.
+  * @author danlek
+  *
+  */
 public class AddCustomerButton extends JButton 
 {
 	private ShopLogic SL;

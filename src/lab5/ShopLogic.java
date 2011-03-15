@@ -1,8 +1,14 @@
 package lab5;
 import javax.swing.*;
+/**
+ * ShopLogic version 1.0
+ * Tillhandahåller alla bas funktioner för att kontrollera
+ * och påverka data i listan och båda köer.
+ * @author danlek
+ *
+ */
 public class ShopLogic
 {
-	
 	private List<Person> customer;
 	private Queue<Person> kassa1;
 	private Queue<Person> kassa2;
@@ -124,7 +130,7 @@ public class ShopLogic
 		}
 		else if(nameOK == false || ageOK == false)
 		{
-			JOptionPane.showMessageDialog(null, "Felaktigtecken! Skriv namn med enbart bokstäver och ålder\n med enbart siffor.");
+			JOptionPane.showMessageDialog(null, "Skriv namn med enbart bokstäver och ålder\n med enbart siffor.");
 		}
 	}
 	public boolean checkName(String name)
@@ -143,8 +149,28 @@ public class ShopLogic
 			}
 			else
 			{
-				pass = false;
-				break;
+				//Kontrollerar ifall användaren har gjort ett mellanslag
+				//för för och efternamn.
+				if(i != (name.length() - 1) && numericalValue == 32 && name.charAt(i - 1)!= ' ')
+				{
+					String temp = String.valueOf(name.charAt(i + 1));
+					//Recursion motherfucker, do you use it?
+					if(checkName(temp))
+					{
+						pass = true;
+					}
+					else
+					{
+						pass = false;
+						break;
+					}
+				}
+				else
+				{
+					pass = false;
+					break;
+				}
+
 			}
 		}
 		return pass;

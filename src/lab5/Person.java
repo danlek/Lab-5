@@ -1,5 +1,11 @@
 package lab5;
-
+/**
+ * Person version 1.0
+ * Bas datatyp för programmet med några
+ * stöd funktioner.
+ * @author danlek
+ *
+ */
 public class Person 
 {
 	private String name, age;

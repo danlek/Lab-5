@@ -3,7 +3,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
- 
+/**
+ * RemoveFromQueue verion 1.0
+ * SubKlass till JButton med action listener
+ * inbyggt.
+ * @author danlek
+ *
+ */
 public class RemoveFromQueue extends JButton 
 {
 	private ShopLogic SL;
@@ -23,11 +29,11 @@ public class RemoveFromQueue extends JButton
 		@Override
 		public void actionPerformed(ActionEvent e) 
 		{
+			//Kollar vilken knapp som är aktuell
 			if(number == 1)
 			{
 				if(SL.isQueue1Empty() == true)
 				{
-					
 					
 				}
 				else
@@ -40,7 +46,6 @@ public class RemoveFromQueue extends JButton
 			{
 				if(SL.isQueue2Empty() == true)
 				{
-					
 					
 				}
 				else

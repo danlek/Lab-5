@@ -1,8 +1,15 @@
 package lab5;
 import javax.swing.*;
+/**
+ * Queue version 1.0
+ * En Kö ADT. Har bas funktioner för att hämta, ta bort och 
+ * kontrollera om kön är tom.
+ * @author danlek
+ *
+ * @param <E>
+ */
 public class Queue<E> extends AbstractListModel implements ListModel
 {
-
 	private static final long serialVersionUID = 1222173619319652056L;
 	private DefaultListModel queue;
 	public Queue()
@@ -27,17 +34,15 @@ public class Queue<E> extends AbstractListModel implements ListModel
 		return queue;
 	}
 	//Crap jag var tyvungen att lägga till men som
-	//inte gör nåt
+	//inte gör nåt.
 	@Override
 	public Object getElementAt(int arg0) 
 	{
-		// TODO Auto-generated method stub
 		return null;
 	}
 	@Override
 	public int getSize() 
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
